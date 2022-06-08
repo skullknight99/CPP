@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acmaghou <muteallfocus7@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 17:56:57 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/06/08 08:43:51 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/06/08 17:39:24 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,15 @@
 class PhoneBook
 {
 	private:
-		char	*contacts[8];
+		char	fullName[100];
+		char	phoneNum[100];
+		char	email[100];
 };
 
+class Contact
+{
+	private:
+		
+};
 
 #endif

@@ -1,5 +1,7 @@
 NAME	= phonebook
 
+HEADER	= PhoneBook.hpp
+
 SRCS	= main.cpp
 
 OBJS	= ${SRCS:.cpp=.o}

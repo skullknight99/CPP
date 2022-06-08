@@ -6,13 +6,12 @@
 /*   By: acmaghou <muteallfocus7@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 10:46:09 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/06/07 14:05:15 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/06/08 11:06:39 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <string>
-using namespace std;
 
 int	main(int ac, char **av)
 {
@@ -21,14 +20,14 @@ int	main(int ac, char **av)
 		for(int i = 1; i < ac; i++)
 		{
 			for (int j = 0; av[i][j]; j++)
-				cout << (char) toupper(av[i][j]);
+				std::cout << (char) toupper(av[i][j]);
 			if (i != ac - 1)
-				cout << " ";
+				std::cout << " ";
 			else
-				cout << "\n";
+				std::cout << "\n";
 		}
 	}
 	else
-		cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
 	return (0);
 }

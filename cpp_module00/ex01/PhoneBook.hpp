@@ -6,7 +6,7 @@
 /*   By: acmaghou <muteallfocus7@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 17:56:57 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/06/07 17:57:54 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/06/08 08:43:51 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,9 @@
 
 class PhoneBook
 {
-	public:
+	private:
 		char	*contacts[8];
 };
+
 
 #endif

@@ -1,16 +1,20 @@
-NAME	= phonebook
+NAME	=	phonebook
 
-HEADER	= PhoneBook.hpp
+HEADER	=	PhoneBook.hpp Contact.hpp
 
-SRCS	= main.cpp
+SRCS	=	main.cpp Contact.cpp PhoneBook.cpp
 
-OBJS	= ${SRCS:.cpp=.o}
+OBJS	=	${SRCS:.cpp=.o}
 
-RM		= rm -rf
 
-CXX		= c++
+RM		=	rm -rf
 
-FLAGS	= -Wall -Wextra -Werror
+CXX		=	c++
+
+FLAGS	=	-Wall -Wextra -Werror
+
+%.o:%.cpp	$(HEADER)
+			@$(CXX) $(FLAGS) -c $< -o $@
 
 all:	$(NAME)
 

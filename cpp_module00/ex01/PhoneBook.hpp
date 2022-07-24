@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.h                                        :+:      :+:    :+:   */
+/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acmaghou <muteallfocus7@gmail.com>         +#+  +:+       +#+        */
+/*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/07 17:56:57 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/06/08 17:39:24 by acmaghou         ###   ########.fr       */
+/*   Created: 2022/07/24 08:31:14 by acmaghou          #+#    #+#             */
+/*   Updated: 2022/07/24 11:36:23 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_H
-# define PHONEBOOK_H
+#ifndef	PHONEBOOK_HPP_
+# define PHONEBOOK_HPP_
 
-#include <iostream>
-#include <string>
+#include "Contact.hpp"
+
+class	Contact;
 
 class PhoneBook
 {
 	private:
-		char	fullName[100];
-		char	phoneNum[100];
-		char	email[100];
+		Contact	contacts[8];
+		int		nbr_of_contacts;
+		void	get_contact(int index);
+	public:
+		PhoneBook();
+		void	add_contact();
+		void	get_contact_list();
 };
 
-class Contact
-{
-	private:
-		
-};
 
 #endif

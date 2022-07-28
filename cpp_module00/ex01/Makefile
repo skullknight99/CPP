@@ -2,7 +2,7 @@ NAME	=	phonebook
 
 HEADER	=	PhoneBook.hpp Contact.hpp
 
-SRCS	=	main.cpp Contact.cpp PhoneBook.cpp
+SRCS	=	main.cpp contact.cpp phonebook.cpp
 
 OBJS	=	${SRCS:.cpp=.o}
 

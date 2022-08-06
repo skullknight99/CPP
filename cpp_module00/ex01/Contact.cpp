@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 11:11:53 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/07/23 17:08:54 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/08/06 10:34:58 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,34 +16,35 @@ Contact::Contact() {
 	this->_firstname = "";
 	this->_lastname = "";
 	this->_nickname = "";
-	this->_phone_number = "";
-	this->_darkest_secret = "";
+	this->_phonenumber = "";
+	this->_darkestsecret = "";
 }
 
-Contact::Contact(string fname, string lname, string nickn, string phnum, string darksec) {
+Contact::Contact(string fname, string lname, string nickn, string phnum, string darksec)
+{
 	this->_firstname = fname;
 	this->_lastname = lname;
 	this->_nickname = nickn;
-	this->_phone_number = phnum;
-	this->_darkest_secret = darksec;
+	this->_phonenumber = phnum;
+	this->_darkestsecret = darksec;
 }
 
-string	Contact::getfname() {
+string	Contact::getfname(){
 	return this->_firstname;
 }
 
-string Contact::getlname() {
+string	Contact::getlname(){
 	return this->_lastname;
 }
 
-string Contact::getnickn() {
+string	Contact::getnickn(){
 	return this->_nickname;
 }
 
-string Contact::getphnum() {
-	return this->_phone_number;
+string	Contact::getphnum(){
+	return this->_phonenumber;
 }
 
-string Contact::getdarksec() {
-	return this->_darkest_secret;
+string	Contact::getdarksec(){
+	return this->_darkestsecret;
 }

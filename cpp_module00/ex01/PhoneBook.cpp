@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 11:12:56 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/07/24 14:31:48 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/08/06 16:27:45 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,54 +16,61 @@ PhoneBook::PhoneBook() {
 	this->nbr_of_contacts = 0;
 }
 
-static string	get_value(string s) {
+static string	retrieve_info(string s){
 	string	res;
-	cout << s << ": ";
+	
+	cout << s;
 	getline(cin, res);
 	if (!cin.good())
 	{
-		cout << "Pressed CTRL+D\nExiting...";
-		exit(0);
+		cout << "CTRL+D pressed\nExiting phonebook...\n";
+		exit(1);
 	}
 	return (res);
 }
 
-void	PhoneBook::add_contact() {
-	string	fname = get_value("first name");
-	string	lname = get_value("last name");
-	string	nickn = get_value("nickname");
-	string	phonenum = get_value("phone number");
-	string	darksec = get_value("darkest secret");
-	Contact contact(fname, lname, nickn, phonenum, darksec);
-	this->contacts[nbr_of_contacts++ % 8] = contact;
+void	PhoneBook::add_contact()
+{
+	string	fname = retrieve_info("first name: ");
+	string	lname = retrieve_info("second name: ");
+	string	nickn = retrieve_info("nickname: ");
+	string	phnum = retrieve_info("phone number: ");
+	string	darksec = retrieve_info("darkest secret: ");
+
+	Contact Contact(fname, lname, nickn, phnum, darksec);
+	this->contacts[nbr_of_contacts++ % 8] = Contact;
 }
 
-void	PhoneBook::get_contact(int index) {
+void	PhoneBook::get_contact(int index)
+{
 	if (index > 7 || index >= this->nbr_of_contacts || index < 0) {
-		cout << "IndexError: list index out of range\n";
+		cout << "There's no contact corresponding this index\n";
 		return ;
 	}
-	Contact	Contact = this->contacts[index];
-	cout << "first name: " << Contact.getfname() + "\n";
-	cout << "last name: " << Contact.getlname() + "\n";
-	cout << "nickname: " << Contact.getnickn() + "\n";
-	cout << "Phone number: " << Contact.getphnum() + "\n";
-	cout << "Darkest secret: " << Contact.getdarksec() + "\n";
+	Contact	contact = this->contacts[index];
+	cout << "first name: " << contact.getfname() << endl;
+	cout << "last name: " << contact.getlname() << endl;
+	cout << "nickname: " << contact.getnickn() << endl;
+	cout << "phone number: " << contact.getphnum() << endl;
+	cout << "darkest secret: " << contact.getdarksec() << endl;
 }
-static void	output(string s)
+
+static void	out_info(string s)
 {
 	cout << s.substr(0, 10) << (s.length() > 10 ? "." : "");
 }
-void	PhoneBook::get_contacts_list() {
-	for (int i = 0; i < 8 && i < this->nbr_of_contacts; i++) {
-		Contact Contact = this->contacts[i];
+
+void	PhoneBook::get_contacts_list()
+{
+	for (int i = 0; i < this->nbr_of_contacts; i++)
+	{
+		Contact	con = contacts[i];
 		cout << i << "|";
-		output(Contact.getfname());
+		out_info(con.getfname());
 		cout << "|";
-		output(Contact.getlname());
+		out_info(con.getlname());
 		cout << "|";
-		output(Contact.getnickn());
-		cout << endl;
+		out_info(con.getnickn());
 	}
 	string	nbr;
 	int		index;
@@ -72,8 +79,8 @@ void	PhoneBook::get_contacts_list() {
 	stringstream	ss;
 	ss << nbr;
 	if (!(ss >> index)) {
-		cout << "input error\nExiting...\n";
-		exit(0);
+		cout << "input error\nExiting phonebook...\n";
+		return ;
 	}
 	get_contact(index);
 }

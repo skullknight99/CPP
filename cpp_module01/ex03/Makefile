@@ -1,4 +1,4 @@
-NAME=HiThisIsBrain
+NAME=ViolenceSolvesEverything
 
 CXX = c++
 
@@ -6,18 +6,21 @@ RM = rm -rf
 
 FLAGS = -Wall -Wextra -Werror
 
-SRCS = main.cpp
+SRCS = main.cpp Weapon.cpp HumanA.cpp \
+		HumanB.cpp \
 
 OBJS = $(SRCS:.cpp=.o)
 
-$(NAME): $(OBJS)
+HEADER = HumanA.hpp HumanB.hpp Weapon.hpp
+
+all: $(NAME)
+
+$(NAME): $(OBJS) $(HEADER)
 	@$(CXX) $(FLAGS) $(OBJS) -o $(NAME)
 
 %.o: %.cpp
 	@$(CXX) $(FLAGS) -c $< -o $@
 	@echo "compiling..."
-
-all: $(NAME)
 
 clean:
 	@$(RM) $(OBJS)

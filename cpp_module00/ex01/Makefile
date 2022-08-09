@@ -15,17 +15,18 @@ FLAGS	=	-Wall -Wextra -Werror
 
 %.o:%.cpp	$(HEADER)
 			@$(CXX) $(FLAGS) -c $< -o $@
+			@echo "compiling..."
 
 all:	$(NAME)
 
 $(NAME):	$(OBJS)
-			$(CXX) $(FLAGS) $(SRCS) -o $(NAME)
+			@$(CXX) $(FLAGS) $(SRCS) -o $(NAME)
 
 clean:
-			$(RM) $(OBJS)
+			@$(RM) $(OBJS)
 
 fclean:		clean
-			$(RM) $(NAME)
+			@$(RM) $(NAME)
 
 re:			fclean all
 

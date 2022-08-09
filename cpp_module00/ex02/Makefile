@@ -8,7 +8,9 @@ OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
+HEADER	=	Account.hpp
+
+$(NAME): $(OBJS) $(HEADER)
 	@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
 %.o:%.cpp Account.hpp
@@ -16,9 +18,9 @@ $(NAME): $(OBJS)
 	@echo "compiling..."
 
 clean:
-	$(RM) $(OBJS)
+	@$(RM) $(OBJS)
 
 fclean: clean
-	$(RM) $(NAME)
+	@$(RM) $(NAME)
 
 re: fclean all

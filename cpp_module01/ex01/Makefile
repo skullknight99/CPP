@@ -1,5 +1,5 @@
 NAME	=	MoarBraiiiiinnnzzzZ
-FLAGS	=	-Wall -Wextra 
+FLAGS	=	-Wall -Wextra -Werror
 RM	=	rm -rf
 CXX	=	c++
 
@@ -7,7 +7,9 @@ SRCS	=	main.cpp Zombie.cpp zombieHorde.cpp
 
 OBJS	=	$(SRCS:.cpp=.o)
 
-NAME	:	$(OBJS)
+HEADER	=	zombie.hpp
+
+$(NAME)	:	$(OBJS) $(HEADER)
 		@$(CXX) $(FLAGS) $(OBJS) -o $(NAME)
 
 
@@ -18,10 +20,10 @@ NAME	:	$(OBJS)
 all:	$(NAME)
 
 clean	:
-		$(RM) $(OBJS)
+	@$(RM) $(OBJS)
 
 fclean	: clean
-		$(RM) $(NAME)
+	@$(RM) $(NAME)
 
 re	: fclean all
 

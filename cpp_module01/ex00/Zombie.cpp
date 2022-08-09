@@ -6,13 +6,13 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 09:32:25 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/08/08 13:06:14 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/08/09 08:54:16 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie( std::string name) {
+void	Zombie::giveName( std::string name) {
 	this->name = name;
 }
 

@@ -10,11 +10,9 @@ SRCS = main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-HEADER = sed.hpp
-
 all: $(NAME)
 
-$(NAME): $(OBJS) $(HEADER)
+$(NAME): $(OBJS)
 	@$(CXX) $(FLAGS) $(OBJS) -o $(NAME)
 
 %.o: %.cpp

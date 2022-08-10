@@ -6,17 +6,21 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 15:24:29 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/08/09 18:15:53 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/08/10 11:11:10 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "sed.hpp"
+#include <iostream>
+#include <string>
+#include <fstream>
 
 std::string	replaceStrings(std::string file, std::string s1, std::string s2)
 {
 	std::string		res;
 	size_t	find_len = s1.size();
 	size_t	pos, start = 0;
+	if (s1.empty())
+		return file;
 	while(std::string::npos != (pos = file.find(s1, start)))
 	{
 		res.append(file, start, pos - start);

@@ -1,21 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/10 11:16:13 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/08/12 10:57:05 by acmaghou         ###   ########.fr       */
+/*   Created: 2022/08/10 11:16:10 by acmaghou          #+#    #+#             */
+/*   Updated: 2022/08/12 11:14:09 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
+#ifndef	HARL_HPP
+# define HARL_HPP
 
-int	main()
+#include <iostream>
+#include <string>
+
+class Harl
 {
-	Harl	taylorswift;
-	std::string	cmd;
-	getline(std::cin, cmd);
-	taylorswift.complain(cmd);
-}
+	private:
+		void	debug( void );
+		void	info( void );
+		void	warning( void );
+		void	error( void );
+	public:
+		Harl();
+		~Harl();
+		void	complain( std::string level);
+};
+
+
+#endif

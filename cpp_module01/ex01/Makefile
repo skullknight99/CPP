@@ -1,5 +1,5 @@
 NAME	=	MoarBraiiiiinnnzzzZ
-FLAGS	=	-Wall -Wextra -Werror
+FLAGS	=	-Wall -Wextra -Werror -std=c++98
 RM	=	rm -rf
 CXX	=	c++
 

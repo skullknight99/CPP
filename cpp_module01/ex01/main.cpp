@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 15:48:09 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/08/08 18:03:19 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/08/12 12:29:18 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 int	main( void ) {
 
-	int	N = 5;
+	int	N;
+	std::cin >> N;
 	Zombie*	zombs = zombieHorde(N, "zombieee");
 	delete[] zombs;
 }

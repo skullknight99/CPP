@@ -1,4 +1,4 @@
-NAME	=	Skaarl
+NAME	=	WhiteGirl
 FLAGS	=	-Wall -Wextra -Werror
 RM	=	rm -rf
 CXX	=	c++

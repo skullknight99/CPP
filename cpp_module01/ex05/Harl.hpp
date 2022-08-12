@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/10 11:16:10 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/08/10 11:50:03 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/08/12 08:38:35 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,14 @@
 class Harl
 {
 	private:
-		/* data */
 		void	debug( void );
 		void	info( void );
 		void	warning( void );
 		void	error( void );
 	public:
-		Harl(/* args */);
+		Harl();
 		~Harl();
-		void	complain(std::string level);
+		void	complain( std::string level );
 };
 
 

@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/10 11:16:13 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/08/12 10:57:05 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/08/13 11:14:31 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	main()
 {
-	Harl	taylorswift;
+	Harl	complainer;
 	std::string	cmd;
 	getline(std::cin, cmd);
-	taylorswift.complain(cmd);
+	complainer.complain(cmd);
 }

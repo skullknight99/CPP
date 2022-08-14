@@ -1,28 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   test.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/14 10:07:01 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/08/14 13:18:19 by acmaghou         ###   ########.fr       */
+/*   Created: 2022/08/14 17:45:43 by acmaghou          #+#    #+#             */
+/*   Updated: 2022/08/14 18:14:37 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#include <iostream>
 
-int main( void )
+using namespace	std;
+
+class Count
 {
-	Fixed a;
-	Fixed b( a );
-	Fixed c;
+private:
+	int	value;
+public:
+	Count();
+	~Count();
+	void	operator++ (int) {
+		value+= 100;
+	}
 
-	c = b;
+	void	display() {
+		cout << "Count: " << value << endl;
+	}
+};
 
-	// std::cout << a.getRawBits() << std::endl;
-	// std::cout << b.getRawBits() << std::endl;
-	// std::cout << c.getRawBits() << std::endl;
+Count::Count(/* args */)
+{
+	this->value = 5;
+}
 
-	return (0);
+Count::~Count()
+{
+}
+
+int	main()
+{
+	Count count1;
+
+	count1++;
+	count1.display();
 }

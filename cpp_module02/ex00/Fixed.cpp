@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 10:06:55 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/08/15 11:42:39 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/08/15 12:44:29 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,24 @@
 
 Fixed::Fixed()
 {
-	std::cout << "Default constructor called" << std::endl;
 	this->store = 0;
+	std::cout << "Default constructor called" << std::endl;
 }
 
-void	Fixed::setRawBits(int const raw) {
-	this->store = raw;
+Fixed::~Fixed()
+{
+	std::cout << "Destructor called" << std::endl;
 }
 
-Fixed::Fixed(const Fixed &obj) {
+Fixed::Fixed(Fixed &obj) {
 	std::cout << "Copy constructor called" << std::endl;
-	store = obj.store;
+	*this = obj;
 }
 
-Fixed&	Fixed::operator= (const Fixed& obj)
+Fixed&	Fixed::operator= (Fixed& obj)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
-	store = obj.getRawBits();
+	this->store = obj.getRawBits();
 	return *this;
 }
 
@@ -39,7 +40,6 @@ int	Fixed::getRawBits( void ) const {
 	return (this->store);
 }
 
-Fixed::~Fixed()
-{
-	std::cout << "Destructor called" << std::endl;
+void	Fixed::setRawBits(int const raw) {
+	this->store = raw;
 }

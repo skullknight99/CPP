@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 10:07:01 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/08/14 13:18:19 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/08/15 10:19:51 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ int main( void )
 
 	c = b;
 
-	// std::cout << a.getRawBits() << std::endl;
-	// std::cout << b.getRawBits() << std::endl;
-	// std::cout << c.getRawBits() << std::endl;
+	std::cout << a.getRawBits() << std::endl;
+	std::cout << b.getRawBits() << std::endl;
+	std::cout << c.getRawBits() << std::endl;
 
 	return (0);
 }

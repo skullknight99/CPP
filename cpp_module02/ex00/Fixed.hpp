@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 10:06:58 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/08/14 18:44:33 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/08/15 10:20:04 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ class Fixed
 		~Fixed();
 		Fixed(const Fixed &obj);
 		Fixed&	operator= (const Fixed &obj);
-		// int		getRawBits( void ) const;
-		// void	setRawBits( int const raw );
+		int		getRawBits( void ) const;
+		void	setRawBits( int const raw );
 };
 
 

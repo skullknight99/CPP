@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/14 10:06:55 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/08/15 15:27:45 by acmaghou         ###   ########.fr       */
+/*   Created: 2022/08/15 14:13:37 by acmaghou          #+#    #+#             */
+/*   Updated: 2022/08/15 15:26:02 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,16 @@ Fixed::Fixed()
 	std::cout << "Default constructor called" << std::endl;
 }
 
+Fixed::Fixed(const int x)
+{
+	
+}
+
+Fixed::Fixed(const float y)
+{
+	
+}
+
 //---------------Destructor---------------
 Fixed::~Fixed()
 {
@@ -26,13 +36,13 @@ Fixed::~Fixed()
 }
 
 //-------------Copy Constructor-----------
-Fixed::Fixed(const Fixed &obj) {
+Fixed::Fixed(Fixed &obj) {
 	std::cout << "Copy constructor called" << std::endl;
 	*this = obj;
 }
 
 //----------Copy Assignment Overload------
-Fixed&	Fixed::operator= (const Fixed& obj)
+Fixed&	Fixed::operator= (Fixed& obj)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
 	this->store = obj.getRawBits();

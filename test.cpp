@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 17:45:43 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/08/15 13:01:12 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/08/16 14:19:22 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,35 +14,40 @@
 
 using namespace	std;
 
-class Count
+class MyClass
 {
 private:
-	int	value;
+	string	salute;
 public:
-	Count();
-	~Count();
-	void	operator++ (int) {
-		value+= 100;
+	MyClass();
+	void	setString(string str)
+	{
+		this->salute = str;
 	}
-
-	void	display() {
-		cout << "Count: " << value << endl;
+	string	getString()
+	{
+		return (this->salute);
+	}
+	~MyClass();
+	string	operator+ () {
+		this->salute + this->salute;
 	}
 };
 
-Count::Count(/* args */)
+MyClass::MyClass(/* args */)
 {
-	this->value = 5;
+	this->salute = "";
 }
 
-Count::~Count()
+MyClass::~MyClass()
 {
 }
 
 int	main()
 {
-	Count count1;
-
-	count1++;
-	count1.display();
+	MyClass p1;
+	MyClass p2;
+	p1.setString("Hello, ");
+	p2.setString("World!");
+	cout << p1.getString() + p2.getString();
 }

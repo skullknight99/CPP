@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 13:35:31 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/08/16 17:17:55 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/08/17 10:14:30 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,6 @@ class Fixed
 };
 
 std::ostream&	operator<< (std::ostream& out, const Fixed &obj);
-
+int				myPow(int nb, int power);
 
 #endif

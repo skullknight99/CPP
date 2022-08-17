@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 14:13:37 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/08/16 17:38:50 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/08/17 10:14:14 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ Fixed::Fixed(const int x)
 
 Fixed::Fixed(const float y)
 {
-	this->store = roundf(y * pow(2, this->fractBits));
+	this->store = roundf(y * myPow(2, this->fractBits));
 	std::cout << "Float constructor called" << std::endl;
 }
 
@@ -71,11 +71,24 @@ void	Fixed::setRawBits(int const raw) {
 //----------toFloat Function--------------
 
 float	Fixed::toFloat( void ) const {
-	return ((float) this->store) / pow(2, this->fractBits);
+	return ((float) this->store) / myPow(2, this->fractBits);
 }
 
 //----------toInt Function----------------
 
 int		Fixed::toInt( void ) const {
 	return	this->store >> this->fractBits;
+}
+
+int	myPow(int nb, int power)
+{
+	int	res = 1;
+	if (power < 0)
+		return (0);
+	while (power)
+	{
+		res *= nb;
+		power--;
+	}
+	return (res);
 }

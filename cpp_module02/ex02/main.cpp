@@ -6,15 +6,15 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 11:15:15 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/08/17 11:18:15 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/08/18 16:57:18 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <Fixed.hpp>
+#include "Fixed.hpp"
 
 int main( void ) {
 	Fixed a;
-	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
+	Fixed const b( Fixed(5.05f) * Fixed(2) );
 
 	std::cout << a << std::endl;
 	std::cout << ++a << std::endl;
@@ -23,4 +23,5 @@ int main( void ) {
 	std::cout << a << std::endl;
 	std::cout << b << std::endl;
 	std::cout << Fixed::max( a, b ) << std::endl;
-return 0;
+	return 0;
+}

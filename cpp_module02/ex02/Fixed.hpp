@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 11:15:12 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/08/18 13:00:01 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/08/18 17:15:00 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,6 @@ class Fixed
 		Fixed(const float y);
 		~Fixed();
 		Fixed(const Fixed &obj);
-		Fixed&			operator+ (const Fixed &obj);
-		Fixed&			operator- (const Fixed &obj);
-		Fixed&			operator* (const Fixed &obj);
-		Fixed&			operator/ (const Fixed &obj);
 		Fixed&			operator= (const Fixed &obj);
 		Fixed&			operator++ ();
 		Fixed&			operator-- ();
@@ -40,11 +36,17 @@ class Fixed
 		void			setRawBits( int const raw );
 		float			toFloat( void ) const;
 		int				toInt( void ) const;
-		Fixed&			min(Fixed &x, Fixed &y);
-		const Fixed&	min(const Fixed &x, const Fixed &y);
+		static Fixed&			min(Fixed &x, Fixed &y);
+		static Fixed&			max(Fixed &x, Fixed &y);
+		static const Fixed&	min(const Fixed &x, const Fixed &y);
+		static const Fixed&	max(const Fixed &x, const Fixed &y);
 };
 
 bool			operator> (const Fixed &obj1, const Fixed &obj2);
+Fixed			operator* (const Fixed &x, const Fixed &y);
+Fixed			operator+ (const Fixed &x, const Fixed &y);
+Fixed			operator- (const Fixed &x, const Fixed &y);
+Fixed			operator/ (const Fixed &x, const Fixed &y);
 bool			operator< (const Fixed &obj1, const Fixed &obj2);
 bool			operator>= (const Fixed &obj1, const Fixed &obj2);
 bool			operator<= (const Fixed &obj1, const Fixed &obj2);

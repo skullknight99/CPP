@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.cpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/14 17:45:43 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/08/17 10:38:58 by acmaghou         ###   ########.fr       */
+/*   Created: 2022/08/17 11:15:15 by acmaghou          #+#    #+#             */
+/*   Updated: 2022/08/17 11:18:15 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <cmath>
-using namespace	std;
+#include <Fixed.hpp>
 
-int	main()
-{
-	cout << "roundf: \n";
-	cout << "7.25 rounded is: " << roundf(7.25) << endl;
-	cout << "7.75 rounded is: " << roundf(7.75) << endl;
+int main( void ) {
+	Fixed a;
+	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
 
-	cout << "round: \n";
-	cout << "7.25 rounded is: " << round(7.25) << endl;
-	cout << "7.75 rounded is: " << round(7.75) << endl;
-}
+	std::cout << a << std::endl;
+	std::cout << ++a << std::endl;
+	std::cout << a << std::endl;
+	std::cout << a++ << std::endl;
+	std::cout << a << std::endl;
+	std::cout << b << std::endl;
+	std::cout << Fixed::max( a, b ) << std::endl;
+return 0;

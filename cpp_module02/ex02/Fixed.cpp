@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/15 14:13:37 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/08/17 11:17:19 by acmaghou         ###   ########.fr       */
+/*   Created: 2022/08/17 11:15:09 by acmaghou          #+#    #+#             */
+/*   Updated: 2022/08/18 13:00:27 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ Fixed::Fixed(const Fixed &obj) {
 	*this = obj;
 }
 
-//----------Copy Assignment Overload------
+//----------Operator Overloading---------
 Fixed&	Fixed::operator= (const Fixed& obj)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
@@ -51,10 +51,95 @@ Fixed&	Fixed::operator= (const Fixed& obj)
 	return *this;
 }
 
-//----------Bitwise Operator Overload-----
 std::ostream&	operator<< (std::ostream& out, const Fixed &obj) {
 	out << obj.toFloat();
 	return out;
+}
+
+Fixed&	Fixed::operator+ (const Fixed &obj) {
+	this->store += obj.store;
+	return *this;
+}
+
+Fixed&	Fixed::operator- (const Fixed &obj) {
+	this->store -= obj.store;
+	return *this;
+}
+
+Fixed&	Fixed::operator* (const Fixed &obj) {
+	this->store *= obj.store;
+	return *this;
+}
+
+Fixed&	Fixed::operator/ (const Fixed &obj) {
+	this->store /= obj.store;
+	return *this;
+}
+
+bool	operator> (const Fixed &obj1, const Fixed &obj2) {
+	return obj1.getRawBits() > obj2.getRawBits();
+}
+
+bool			operator< (const Fixed &obj1, const Fixed &obj2) {
+	return obj1.getRawBits() < obj2.getRawBits();
+}
+
+bool			operator>= (const Fixed &obj1, const Fixed &obj2) {
+	return obj1.getRawBits() >= obj2.getRawBits();
+}
+
+bool			operator<= (const Fixed &obj1, const Fixed &obj2) {
+	return obj1.getRawBits() <= obj2.getRawBits();
+}
+
+bool			operator== (const Fixed &obj1, const Fixed &obj2) {
+	return obj1.getRawBits() == obj2.getRawBits();
+}
+
+bool			operator!= (const Fixed &obj1, const Fixed &obj2) {
+	return obj1.getRawBits() != obj2.getRawBits();
+}
+
+//---------post-increment/decrement------
+
+Fixed		Fixed::operator++ (int) {
+	Fixed tmp(*this);
+	this->store++;
+	return tmp;
+}
+
+Fixed		Fixed::operator-- (int) {
+	Fixed	tmp(*this);
+	this->store--;
+	return	tmp;
+}
+
+//--------pre-increment/decrement--------
+
+Fixed&		Fixed::operator-- () {
+	this->store--;
+	return *this;
+}
+
+Fixed&		Fixed::operator++ () {
+	this->store++;
+	return *this;
+}
+
+//-----------min-fixed-point--------------
+
+Fixed&		Fixed::min(Fixed &x, Fixed &y) {
+	if (x > y)
+		return y;
+	else
+		return x;
+}
+
+const Fixed&	min(const Fixed &x, const Fixed &y) {
+	if (x > y)
+		return y;
+	else
+		return x;
 }
 
 //-----------Getter Function--------------
@@ -80,7 +165,8 @@ int		Fixed::toInt( void ) const {
 	return	this->store >> this->fractBits;
 }
 
-//----------Pow Function------------------
+//----------myPow Function----------------
+
 int	myPow(int nb, int power)
 {
 	int	res = 1;

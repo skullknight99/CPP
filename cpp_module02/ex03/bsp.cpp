@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 18:32:41 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/08/19 11:34:37 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/08/20 15:46:29 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #define YCOR	getY().toFloat()
 #define ABS(X)	X > 0 ? X : -X
 static float	area(float x1, float y1, float x2, float y2, float x3, float y3) {
-	float	surface = roundf((x1*(y2 -y3) + x2*(y3 - y1) + x3*(y1 - y2))/2);
+	float	surface = (x1*(y2 -y3) + x2*(y3 - y1) + x3*(y1 - y2))/2;
 	return ABS(surface);
 }
 

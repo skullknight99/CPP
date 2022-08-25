@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 13:36:18 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/08/25 10:47:11 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/08/25 12:03:28 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,6 @@ ClapTrap::ClapTrap(const ClapTrap &ct) {
 
 //---------attack, takeDamage, beRepaired---------
 void	ClapTrap::attack(const std::string& target) {
-	if (this->mana == 0)
-	{
-		std::cout << "not enough mana to cast an attack\n";
-		return ;
-	}
 	this->mana--;
 	std::cout << this->name << " attacks " << target;
 	std::cout << ", causing " << this->ad << " point of damage!" << std::endl;
@@ -57,11 +52,6 @@ void	ClapTrap::takeDamage(unsigned int amount) {
 }
 
 void	ClapTrap::beRepaired(unsigned int amount) {
-	if (this->mana == 0)
-	{
-		std::cout << "not enough mana to cast a heal\n";
-		return ;
-	}
 	this->mana--;
 	this->hp++;
 	std::cout << this->name << " healed for " << amount << std::endl;

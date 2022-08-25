@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 13:36:18 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/08/25 14:16:45 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/08/25 14:16:12 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	ClapTrap::takeDamage(unsigned int amount) {
 
 void	ClapTrap::beRepaired(unsigned int amount) {
 	this->mana--;
-	this->hp+= amount;
+	this->hp += amount;
 	std::cout << this->name << " healed for " << amount << std::endl;
 }
 

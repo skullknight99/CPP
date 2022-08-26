@@ -1,19 +1,19 @@
-NAME	=	ClapTrap
+NAME	=	ScavTrap
 FLAGS	=	-Wall -Wextra -Werror -std=c++98
 RM	=	rm -rf
 CXX	=	c++
 
-SRCS	=	main.cpp ClapTrap.cpp
+SRCS	=	main.cpp ClapTrap.cpp ScavTrap.cpp
 
 OBJS	=	$(SRCS:.cpp=.o)
 
-HEADER	=	ClapTrap.hpp
+HEADER	=	ClapTrap.hpp ScavTrap.hpp
 
 $(NAME)	:	$(OBJS) $(HEADER)
 		@$(CXX) $(FLAGS) $(OBJS) -o $(NAME)
 
 
-%.o:%.cpp ClapTrap.hpp
+%.o:%.cpp $(HEADER)
 	@$(CXX) $(FLAGS) -c $< -o $@
 	@echo "compiling..."
 

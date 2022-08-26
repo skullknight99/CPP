@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 13:36:18 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/08/25 17:36:24 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/08/26 12:20:41 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,15 @@ ClapTrap::ClapTrap(std::string str)
 	this->hp = 10;
 	this->mana = 10;
 	this->ad = 0;
+}
+
+//----- constructor to update claptrap ------
+ClapTrap::ClapTrap(std::string str, int x, int y, int z) {
+	std::cout << "ClapTrap constructor called with 4 parameters" << std::endl;
+	this->name = str;
+	this->hp = x;
+	this->mana = y;
+	this->ad = z;
 }
 
 ClapTrap::~ClapTrap() {

@@ -6,15 +6,16 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 13:36:24 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/08/25 14:19:30 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/08/26 12:45:08 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int	main( void ) {
-	ClapTrap	x("Aatrox");
-	ClapTrap	y("Ornn");
+	ScavTrap	x("Aatrox");
+	ScavTrap	y("Ornn");
 	while (y.gethp() || x.gethp())
 	{
 		std::cout << x.getname() << std::endl;
@@ -28,10 +29,10 @@ int	main( void ) {
 		std::cout << "Attack Damage: "<< y.getad() << std::endl;
 		std::cout << "============================" << std::endl;
 		x.attack(y.getname());
-		y.takeDamage(1);
+		y.takeDamage(x.getad());
 		y.attack(x.getname());
 		y.beRepaired(0);
-		x.beRepaired(3);
+		x.beRepaired(y.getad());
 		std::cout << ".//////////////////." << std::endl;
 		std::cout << "summary of the round:" << std::endl;
 		if (y.gethp() <= 0 || x.gethp() <= 0)

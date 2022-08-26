@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 14:50:34 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/08/26 15:54:36 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/08/26 16:02:48 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,11 @@
 int	main( void ) {
 	FragTrap	x("Raja");
 	FragTrap	y("Achraf");
+	std::cout << "FIGHTERS ON THE RING, TOUCH EACH OTHERS GLOVES" << std::endl;
+	std::cout << "////////////////////////" << std::endl;
+	x.highFivesGuys();
+	y.highFivesGuys();
+	std::cout << "------ FIGHT!!!!! ---------" << std::endl;
 	while (y.gethp() || x.gethp())
 	{
 		std::cout << x.getname() << std::endl;
@@ -27,8 +32,6 @@ int	main( void ) {
 		std::cout << "Mana: "<< y.getmana() << std::endl;
 		std::cout << "Attack Damage: "<< y.getad() << std::endl;
 		std::cout << "============================" << std::endl;
-		x.highFivesGuys();
-		y.highFivesGuys();
 		x.attack(y.getname());
 		y.takeDamage(x.getad());
 		y.attack(x.getname());

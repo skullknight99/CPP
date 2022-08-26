@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 13:52:25 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/08/26 14:59:25 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/08/26 15:55:12 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ FragTrap::~FragTrap() {
 }
 
 void	highFivesGuys( void ) {
-	
+	std::cout << "Dab me up homie" << std::endl;
 }

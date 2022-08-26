@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 16:31:37 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/08/26 12:37:28 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/08/26 15:53:55 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name, 100, 50, 20) {
 }
 
 ScavTrap::~ScavTrap() {
+	std::cout << "ScavTrap destructor called" << std::endl;
 }
 
 void	ScavTrap::guardGate() {

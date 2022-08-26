@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 14:50:34 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/08/26 15:37:49 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/08/26 15:54:36 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ int	main( void ) {
 		std::cout << "Mana: "<< y.getmana() << std::endl;
 		std::cout << "Attack Damage: "<< y.getad() << std::endl;
 		std::cout << "============================" << std::endl;
+		x.highFivesGuys();
+		y.highFivesGuys();
 		x.attack(y.getname());
 		y.takeDamage(x.getad());
 		y.attack(x.getname());

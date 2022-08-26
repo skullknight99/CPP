@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 13:36:18 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/08/25 14:16:12 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/08/26 12:17:47 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,22 @@
 //------Constructor and destructor--------
 ClapTrap::ClapTrap(std::string str)
 {
-	std::cout << "Constructor called" << std::endl;
+	std::cout << "ClapTrap constructor called" << std::endl;
 	this->name = str;
 	this->hp = 10;
 	this->mana = 10;
 	this->ad = 0;
 }
 
+ClapTrap::ClapTrap(std::string str, int x, int y, int z) {
+	this->name = str;
+	this->hp = x;
+	this->mana = y;
+	this->ad = z;
+}
+
 ClapTrap::~ClapTrap() {
-	std::cout << "Destructor called\n";
+	std::cout << "ClapTrap destructor called\n";
 }
 
 //---------copy constructor and assignment overload-----

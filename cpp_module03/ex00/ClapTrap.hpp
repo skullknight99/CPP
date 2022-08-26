@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 13:36:21 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/08/25 12:06:22 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/08/26 12:18:13 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ class ClapTrap
 		int			ad;
 	public:
 		ClapTrap(std::string name);
+		ClapTrap(std::string str, int x, int y, int z);
 		~ClapTrap();
 		ClapTrap(const ClapTrap	&ct);
 		ClapTrap&	operator= (const ClapTrap &ct);

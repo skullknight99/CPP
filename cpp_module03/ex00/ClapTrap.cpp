@@ -6,13 +6,21 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 13:36:18 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/08/26 12:20:41 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/08/27 16:35:07 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
 //------Constructor and destructor--------
+
+ClapTrap::ClapTrap() {
+	this->name = "";
+	this->hp = 0;
+	this->mana = 0;
+	this->ad = 0;
+}
+
 ClapTrap::ClapTrap(std::string str)
 {
 	std::cout << "ClapTrap constructor called" << std::endl;
@@ -22,6 +30,11 @@ ClapTrap::ClapTrap(std::string str)
 	this->ad = 0;
 }
 
+
+ClapTrap::~ClapTrap() {
+	std::cout << "ClapTrap destructor called\n";
+}
+
 //----- constructor to update claptrap ------
 ClapTrap::ClapTrap(std::string str, int x, int y, int z) {
 	std::cout << "ClapTrap constructor called with 4 parameters" << std::endl;
@@ -29,10 +42,6 @@ ClapTrap::ClapTrap(std::string str, int x, int y, int z) {
 	this->hp = x;
 	this->mana = y;
 	this->ad = z;
-}
-
-ClapTrap::~ClapTrap() {
-	std::cout << "ClapTrap destructor called\n";
 }
 
 //---------copy constructor and assignment overload-----

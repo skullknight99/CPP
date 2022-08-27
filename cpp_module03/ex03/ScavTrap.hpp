@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 16:31:34 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/08/27 12:02:08 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/08/27 16:40:16 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 class ScavTrap : virtual public ClapTrap
 {
 	public:
+		ScavTrap();
 		ScavTrap(std::string name);
 		~ScavTrap();
 		void	guardGate();

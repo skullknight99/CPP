@@ -6,14 +6,14 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 14:50:34 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/08/27 11:58:41 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/08/27 12:25:36 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
 int	main( void ) {
-	DiamondTrap	x("saad");
+	DiamondTrap	x("Raja");
 	DiamondTrap	y("Achraf");
 	std::cout << "FIGHTERS ON THE RING, TOUCH EACH OTHERS GLOVES" << std::endl;
 	std::cout << "////////////////////////" << std::endl;

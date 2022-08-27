@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 13:52:22 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/08/27 16:40:10 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/08/27 17:40:37 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class FragTrap : virtual public ClapTrap
 		FragTrap();
 		FragTrap(std::string name);
 		~FragTrap();
+		void	attack(std::string target);
 		void	highFivesGuys( void );
 };
 

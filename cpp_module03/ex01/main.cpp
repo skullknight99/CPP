@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 13:36:24 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/08/26 12:45:08 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/08/28 12:54:47 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ int	main( void ) {
 		y.attack(x.getname());
 		y.beRepaired(0);
 		x.beRepaired(y.getad());
+		x.guardGate();
+		y.guardGate();
 		std::cout << ".//////////////////." << std::endl;
 		std::cout << "summary of the round:" << std::endl;
 		if (y.gethp() <= 0 || x.gethp() <= 0)

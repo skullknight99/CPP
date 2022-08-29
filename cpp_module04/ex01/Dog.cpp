@@ -1,32 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/29 16:32:38 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/08/29 18:04:11 by acmaghou         ###   ########.fr       */
+/*   Created: 2022/08/29 16:36:51 by acmaghou          #+#    #+#             */
+/*   Updated: 2022/08/29 16:41:02 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef	WRONGANIMAL_HPP
-#define WRONGANIMAL_HPP
+#include "Dog.hpp"
 
-#include <iostream>
-#include <cstring>
+Dog::Dog() : Animal("Dog") {
+	std::cout << "Dog created (♡⸃ ◡ ⸂♡)" << std::endl;
+}
 
-class WrongAnimal {
-	protected:
-		std::string type;
-	public:
-		WrongAnimal();
-		WrongAnimal(std::string type);
-		WrongAnimal(const WrongAnimal &x);
-		WrongAnimal&	operator= (const WrongAnimal &x);
-		~WrongAnimal();
-		std::string	getType() const;
-		void	makeSound() const;
-};
-
-#endif
+Dog::~Dog() {
+	std::cout << "Dog died ಥ_ಥ" << std::endl;
+}

@@ -1,32 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/29 16:32:38 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/08/29 18:04:11 by acmaghou         ###   ########.fr       */
+/*   Created: 2022/08/29 16:35:28 by acmaghou          #+#    #+#             */
+/*   Updated: 2022/08/29 16:41:08 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef	WRONGANIMAL_HPP
-#define WRONGANIMAL_HPP
+#include "Cat.hpp"
 
-#include <iostream>
-#include <cstring>
+Cat::Cat() : Animal("Cat") {
+	std::cout << "Cat created (♡⸃ ◡ ⸂♡)" << std::endl;
+}
 
-class WrongAnimal {
-	protected:
-		std::string type;
-	public:
-		WrongAnimal();
-		WrongAnimal(std::string type);
-		WrongAnimal(const WrongAnimal &x);
-		WrongAnimal&	operator= (const WrongAnimal &x);
-		~WrongAnimal();
-		std::string	getType() const;
-		void	makeSound() const;
-};
-
-#endif
+Cat::~Cat() {
+	std::cout << "Cat died ಥ_ಥ" << std::endl;
+}

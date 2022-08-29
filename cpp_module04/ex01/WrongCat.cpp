@@ -1,32 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/29 16:32:38 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/08/29 18:04:11 by acmaghou         ###   ########.fr       */
+/*   Created: 2022/08/29 16:35:53 by acmaghou          #+#    #+#             */
+/*   Updated: 2022/08/29 16:36:12 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef	WRONGANIMAL_HPP
-#define WRONGANIMAL_HPP
+#include "WrongCat.hpp"
 
-#include <iostream>
-#include <cstring>
+WrongCat::WrongCat() : WrongAnimal("WrongCat") {
+	std::cout << "Wrong cat created" << std::endl;
+}
 
-class WrongAnimal {
-	protected:
-		std::string type;
-	public:
-		WrongAnimal();
-		WrongAnimal(std::string type);
-		WrongAnimal(const WrongAnimal &x);
-		WrongAnimal&	operator= (const WrongAnimal &x);
-		~WrongAnimal();
-		std::string	getType() const;
-		void	makeSound() const;
-};
-
-#endif
+WrongCat::~WrongCat() {
+	std::cout << "Wrong cat dead (nobody cares)" << std::endl;
+}

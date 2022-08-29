@@ -3,17 +3,17 @@ FLAGS	=	-Wall -Wextra -Werror -std=c++98
 RM	=	rm -rf
 CXX	=	c++
 
-SRCS	=	main.cpp poly.cpp
+SRCS	=	main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
 
 OBJS	=	$(SRCS:.cpp=.o)
 
-HEADER	=	poly.hpp
+HEADER	=	Animal.hpp Dog.hpp Cat.hpp WrongAnimal.hpp WrongCat.hpp
 
 $(NAME)	:	$(OBJS) $(HEADER)
 		@$(CXX) $(FLAGS) $(OBJS) -o $(NAME)
 
 
-%.o:%.cpp poly.hpp
+%.o:%.cpp $(HEADER)
 	@$(CXX) $(FLAGS) -c $< -o $@
 	@echo "compiling..."
 

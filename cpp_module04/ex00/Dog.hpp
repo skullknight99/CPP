@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/29 11:28:29 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/08/29 16:40:19 by acmaghou         ###   ########.fr       */
+/*   Created: 2022/08/29 16:31:49 by acmaghou          #+#    #+#             */
+/*   Updated: 2022/08/29 16:33:51 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
-#include "Dog.hpp"
-#include "WrongCat.hpp"
+#ifndef	DOG_HPP
+#define DOG_HPP
 
-int	main() {
-	const Animal	*meta = new	Animal();
-	const Animal	*j = new	Dog();
-	const Animal	*i = new	Cat();
+#include <iostream>
+#include <cstring>
+#include "Animal.hpp"
 
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound();
-	j->makeSound();
-	meta->makeSound();
-	delete	meta;
-	delete	j;
-	delete	i;
-	return (0);
-}
+class Dog : public Animal
+{
+	public:
+		Dog();
+		virtual ~Dog();
+};
+
+#endif

@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 16:30:53 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/08/29 16:31:36 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/09/01 12:03:20 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class	Animal{
 		virtual ~Animal();
 		Animal(const Animal &x);
 		Animal&	operator= (const Animal &x);
-		void	makeSound() const;
+		virtual void	makeSound() const;
 		std::string	getType() const;
 };
 

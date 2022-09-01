@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 16:35:16 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/08/29 16:37:48 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/09/01 12:04:10 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,5 @@ std::string	Animal::getType() const {
 }
 
 void	Animal::makeSound() const {
-	if (getType() == "Cat")
-		std::cout << "Meowwww (=｀ω´=)" << std::endl;
-	else if (getType() == "Dog")
-		std::cout << "WOOF WOOF ▼(´ᴥ`)▼" << std::endl;
+	std::cout << "Unrecognizable animal sounds" << std::endl;
 }

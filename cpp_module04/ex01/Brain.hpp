@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 16:45:07 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/08/31 15:51:25 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/09/01 12:35:06 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Brain
 		Brain&	operator= (const Brain &b);
 		~Brain();
 		std::string const	*getIdeas() const;
-		void	setIdeas(std::string *ideas);
+		void	setIdeas(std::string ideas);
 };
 
 

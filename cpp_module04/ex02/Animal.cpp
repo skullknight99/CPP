@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 16:35:16 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/01 12:04:10 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/09/03 16:45:28 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ Animal::Animal() {
 }
 
 Animal::~Animal() {
-	std::cout << "Animal died ಥ_ಥ" << std::endl;
 }
 
 Animal::Animal(std::string type) {
@@ -38,8 +37,4 @@ Animal&	Animal::operator= (const Animal &x) {
 
 std::string	Animal::getType() const {
 	return (this->type);
-}
-
-void	Animal::makeSound() const {
-	std::cout << "Unrecognizable animal sounds" << std::endl;
 }

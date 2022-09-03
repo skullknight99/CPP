@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 16:32:18 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/01 12:27:53 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/09/03 15:52:52 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Cat : public Animal
 	public:
 		Cat();
 		virtual ~Cat();
-		virtual void	makeSound() const;
+		void	makeSound() const;
 };
 
 #endif

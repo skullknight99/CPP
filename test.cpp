@@ -1,32 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   test.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/29 16:30:53 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/03 16:45:38 by acmaghou         ###   ########.fr       */
+/*   Created: 2022/09/03 14:49:33 by acmaghou          #+#    #+#             */
+/*   Updated: 2022/09/03 15:49:14 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
-
 #include <iostream>
 #include <cstring>
+using namespace	std;
 
-class	Animal{
-	protected:
-		std::string	type;
+class	Enemy {
 	public:
-		Animal();
-		Animal(std::string type);
-		virtual ~Animal() = 0;
-		Animal(const Animal &x);
-		Animal&	operator= (const Animal &x);
-		virtual void	makeSound() const = 0;
-		std::string	getType() const;
+		virtual	void	attack() = 0;
 };
 
-#endif
+class Ninja : public Enemy
+{
+	public:
+		void	attack() {
+			cout << "ninja attack!\n";
+		}
+};
+
+class Monster : public	Enemy
+{
+	public:
+		void	attack() {
+			cout << "monster attack!\n";
+		}
+};
+
+int	main() {
+	Ninja	n;
+	Monster	m;
+	
+	Enemy	*enemy1	= &n;
+	Enemy	*enemy2	= &m;
+
+	enemy1->attack();
+	enemy2->attack();
+}

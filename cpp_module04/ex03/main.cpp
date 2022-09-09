@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 16:21:55 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/09 17:24:11 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/09/09 17:32:08 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,4 @@ int	main() {
 	delete	Ashe;
 	delete	Tryndamere;
 	delete	src;
-	while (1);
 }

@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 11:28:29 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/10 12:32:06 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/09/10 14:14:38 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,15 @@ int	main() {
 		delete	Pets[i];
 	return (0);
 }
+
+// int	main() {
+// 	WrongAnimal	**Pets = new	WrongAnimal*[5];
+
+// 	for (int i = 0; i < 5; i++) {
+// 		Pets[i] = new	WrongCat;
+// 	}
+// 	for (int i = 0; i < 5; i++) {
+// 		delete	Pets[i];
+// 	}
+// 	return (0);
+// }

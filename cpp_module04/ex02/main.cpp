@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 11:28:29 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/01 17:45:53 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/09/10 14:01:17 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,7 @@ int	main() {
 		Pets[i] = new Dog;
 	for (int i = 0; i < 10; i++)
 		delete	Pets[i];
+	//Example of instantiating a pure virtual class
+	// Animal	*x = new	Animal;
 	return (0);
 }

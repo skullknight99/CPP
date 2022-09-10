@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 16:45:10 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/01 17:50:03 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/09/10 12:22:05 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ Brain::Brain() {
 }
 
 Brain::Brain(std::string ideas) {
+	std::cout << "Create brain and give instinctual idea" << std::endl;
 	for (int i = 0; i < 100; i++)
 		this->ideas[i] = ideas;
 }

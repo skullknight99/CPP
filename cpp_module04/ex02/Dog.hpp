@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 16:31:49 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/03 16:27:42 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/09/10 12:41:08 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,10 @@ class Dog : public Animal
 		Brain	*y;
 	public:
 		Dog();
-		~Dog();
-		void	makeSound() const;
+		virtual ~Dog();
+		Dog(const Dog &d);
+		Dog&	operator= (const Dog &d);
+		virtual void	makeSound() const;
 };
 
 #endif

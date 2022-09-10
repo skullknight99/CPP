@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 16:35:28 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/01 18:06:21 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/09/10 12:41:54 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,19 @@ Cat::Cat() : Animal("Cat") {
 }
 
 Cat::~Cat() {
+	delete x;
 	std::cout << "Cat died ಥ_ಥ" << std::endl;
+}
+
+Cat::Cat(const Cat &c) {
+	*this = c;
+}
+
+Cat&	Cat::operator= (const Cat &c) {
+	Brain *y = new Brain(*c.x->getIdeas());
+	this->type = c.type;
+	this->x = y;
+	return *this;
 }
 
 void	Cat::makeSound() const {

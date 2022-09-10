@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 11:28:29 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/01 17:45:53 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/09/10 12:32:06 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "Dog.hpp"
 #include "WrongCat.hpp"
 
-int	main() {
+int	main() {	
 	Animal	**Pets = new	Animal*[10];
 	
 	for (int i = 0; i < 5; i++)

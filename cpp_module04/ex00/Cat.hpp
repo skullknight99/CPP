@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 16:32:18 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/01 12:03:07 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/09/10 14:02:22 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ class Cat : public Animal
 {
 	public:
 		Cat();
+		Cat(const Cat &c);
+		Cat&	operator= (const Cat &c);
 		virtual ~Cat();
 		virtual void	makeSound() const;
 };

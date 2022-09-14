@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 14:48:12 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/13 17:48:13 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/09/14 10:55:47 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,14 +51,15 @@ void	Bureaucrat::decrement() {
 	checkGrade();
 }
 
-void	Bureaucrat::signForm(Form &f, Bureaucrat& obj) {
+void	Bureaucrat::signForm(Form &f) {
 	try
 	{
-		std::cout << obj.getName() << " signed " << f.getName() << std::endl;
+		f.beSigned(*this);
+		std::cout << this->name << " signed " << f.getName() << std::endl;
 	}
-	catch (std::exception e)
+	catch (std::exception &e)
 	{
-		std::cout << obj.getName() << " couldn't sign " << f.getName() << " because " << e.what();
+		std::cout << this->name << " couldn't sign " << f.getName() << " because " << e.what() << std::endl;
 		
 	}
 }

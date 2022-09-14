@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 14:48:18 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/13 17:49:06 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/09/14 10:49:30 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ class Bureaucrat
 		int			getGrade() const;
 		void		increment();
 		void		decrement();
-		void		signForm(Form &f , Bureaucrat& obj);
+		void		signForm(Form &f);
 		class	GradeTooHighException : public std::exception
 		{
 			public:

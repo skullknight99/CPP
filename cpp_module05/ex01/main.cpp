@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 15:45:09 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/14 10:46:13 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/09/14 10:56:33 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	main() {
 	Bureaucrat b("b", 2);
     Form       formB("Animal rights", 1, 12);
 	std::cout << b << std::endl;
-    formB.beSigned(b);
+    b.signForm(formB);
     std::cout << formB << std::endl;
     std::cout << b << std::endl;
     }

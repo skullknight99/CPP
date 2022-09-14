@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 15:45:09 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/14 10:56:33 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/09/14 11:39:53 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,42 +15,50 @@
 int	main() {
 	// first case
 	try {
-	Bureaucrat b("b", 2);
-    Form       formB("Animal rights", 1, 12);
+	Bureaucrat b("you", 2);
+	Form       formB("the contract", 20, 12);
 	std::cout << b << std::endl;
-    b.signForm(formB);
-    std::cout << formB << std::endl;
-    std::cout << b << std::endl;
-    }
-    catch (Bureaucrat::GradeTooHighException &e) {
-        std::cerr << e.what() << std::endl;
-    }
-    catch (Bureaucrat::GradeTooLowException &e) {
-        std::cerr << e.what() << std::endl;
-    }
+	b.signForm(formB);
+	std::cout << formB;
+	}
+	catch (Bureaucrat::GradeTooHighException &e) {
+		std::cerr << e.what() << std::endl;
+	}
+	catch (Bureaucrat::GradeTooLowException &e) {
+		std::cerr << e.what() << std::endl;
+	}
+	std::cout << "///////////////////" << std::endl;
 	// second case
-    try {
-        Bureaucrat x("x", 1);
-        std::cout << x << std::endl;
-        x.increment();
-    }
-    catch (Bureaucrat::GradeTooHighException &e) {
-        std::cerr << e.what() << std::endl;
-    }
-    catch (Bureaucrat::GradeTooLowException &e) {
-        std::cerr << e.what() << std::endl;
-    }
+	try {
+		Bureaucrat  x("x", 1);
+		Form		formX("SpaceX", 10, 2);
+		std::cout << x << std::endl;
+		x.signForm(formX);
+		std::cout << formX;
+		x.increment();
+	}
+	catch (Bureaucrat::GradeTooHighException &e) {
+		std::cerr << e.what() << std::endl;
+	}
+	catch (Bureaucrat::GradeTooLowException &e) {
+		std::cerr << e.what() << std::endl;
+	}
+	std::cout << "///////////////////" << std::endl;
 	// third case
-    try {
-        Bureaucrat y("y", 150);
-        std::cout << y << std::endl;
-        y.decrement();
-    }
-    catch (Bureaucrat::GradeTooHighException &e) {
-        std::cerr << e.what() << std::endl;
-    }
-    catch (Bureaucrat::GradeTooLowException &e) {
-        std::cerr << e.what() << std::endl;
-    }
+	try {
+		Bureaucrat	y("y", 150);
+		Form		formY("Unicef", 140, 10);
+		std::cout << y << std::endl;
+		y.signForm(formY);
+		std::cout << formY;
+		y.decrement();
+	}
+	catch (Bureaucrat::GradeTooHighException &e) {
+		std::cerr << e.what() << std::endl;
+	}
+	catch (Bureaucrat::GradeTooLowException &e) {
+		std::cerr << e.what() << std::endl;
+	}
+	std::cout << "///////////////////" << std::endl;
 	return 0;
 }

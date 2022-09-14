@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 15:45:09 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/13 13:09:31 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/09/14 10:46:13 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,11 @@ int	main() {
 	// first case
 	try {
 	Bureaucrat b("b", 2);
+    Form       formB("Animal rights", 1, 12);
 	std::cout << b << std::endl;
+    formB.beSigned(b);
+    std::cout << formB << std::endl;
+    std::cout << b << std::endl;
     }
     catch (Bureaucrat::GradeTooHighException &e) {
         std::cerr << e.what() << std::endl;

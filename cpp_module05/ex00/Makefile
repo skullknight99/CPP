@@ -13,7 +13,7 @@ $(NAME)	:	$(OBJS) $(HEADER)
 		@$(CXX) $(FLAGS) $(OBJS) -o $(NAME)
 
 
-%.o:%.cpp Bureaucrat.hpp
+%.o:%.cpp %.hpp
 	@$(CXX) $(FLAGS) -c $< -o $@
 	@echo "compiling..."
 

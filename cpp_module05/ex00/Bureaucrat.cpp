@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 14:48:12 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/13 11:25:24 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/09/13 17:48:21 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ Bureaucrat&	Bureaucrat::operator= (const Bureaucrat& obj) {
 	return *this;
 }
 
-std::string const	Bureaucrat::getName() const {
+std::string Bureaucrat::getName() const {
 	return	(this->name);
 }
 

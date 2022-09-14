@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 14:48:18 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/13 11:18:50 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/09/13 17:48:30 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ class Bureaucrat
 		Bureaucrat(const Bureaucrat& obj);
 		Bureaucrat&	operator=(const Bureaucrat& obj);
 		~Bureaucrat();
-		std::string	const getName() const;
+		std::string getName() const;
 		int	getGrade() const;
 		void	increment();
 		void	decrement();

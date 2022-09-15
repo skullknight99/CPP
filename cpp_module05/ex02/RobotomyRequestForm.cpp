@@ -6,16 +6,17 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 14:11:17 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/14 15:02:42 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/09/15 12:56:50 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
 
-RobotomyRequestForm::RobotomyRequestForm() {
+RobotomyRequestForm::RobotomyRequestForm()  : Form() {
 }
 
-RobotomyRequestForm::RobotomyRequestForm(Bureaucrat &target) : Form("RobotomyRequestForm", 72, 45) {
+RobotomyRequestForm::RobotomyRequestForm(std::string target) : Form("RobotomyRequestForm", 72, 45) {
+	this->target = target;
 }
 
 RobotomyRequestForm::~RobotomyRequestForm() {
@@ -26,6 +27,17 @@ RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm& obj) {
 }
 
 RobotomyRequestForm&	RobotomyRequestForm::operator= (const RobotomyRequestForm& obj) {
-	(void )obj;
+	this->target = obj.target;
 	return *this;
+}
+
+std::string				RobotomyRequestForm::getTarget() {
+	return this->target;
+}
+void					RobotomyRequestForm::action() const {
+	std::cout << "VRRRVVRVRVRRRRRRRRVRVRRVRVRVRVR" << std::endl;
+	if (rand() % 2 == 0)
+		std::cout << this->target << " has been robotomized successfully" << std::endl;
+	else
+		std::cout << "Robotomy failed" << std::endl;
 }

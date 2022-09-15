@@ -6,16 +6,17 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 14:11:20 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/14 14:59:35 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/09/15 12:56:56 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
 
-PresidentialPardonForm::PresidentialPardonForm() {
+PresidentialPardonForm::PresidentialPardonForm()  : Form() {
 }
 
-PresidentialPardonForm::PresidentialPardonForm(Bureaucrat &target) : Form("PresidentialPardonForm", 25, 5) {
+PresidentialPardonForm::PresidentialPardonForm(std::string target) : Form("PresidentialPardonForm", 25, 5) {
+	this->target = target;
 }
 
 PresidentialPardonForm::~PresidentialPardonForm() {
@@ -26,7 +27,14 @@ PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm& obj
 }
 
 PresidentialPardonForm&	PresidentialPardonForm::operator= (const PresidentialPardonForm& obj) {
-	(void )obj;
+	this->target = obj.target;
 	return *this;
 }
 
+std::string				PresidentialPardonForm::getTarget() {
+	return	this->target;
+}
+
+void					PresidentialPardonForm::action() const {
+	std::cout << this->target << " has pardoned Zaphod Beeblebrox." << std::endl;
+}

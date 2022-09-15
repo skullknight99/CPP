@@ -1,4 +1,4 @@
-NAME	=	Mag
+NAME	=	Forms
 FLAGS	=	-Wall -Wextra -Werror -std=c++98
 RM	=	rm -rf
 CXX	=	c++

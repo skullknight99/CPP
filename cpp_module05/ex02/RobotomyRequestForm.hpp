@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 14:11:24 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/14 15:02:07 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/09/15 12:56:20 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,20 @@
 
 #include <iostream>
 #include <string>
+#include <cstdlib>
 #include "Form.hpp"
 
 class	RobotomyRequestForm : public Form
 {
+	private:
+		std::string	target;
 	public:
 		RobotomyRequestForm();
-		RobotomyRequestForm(Bureaucrat &target);
+		RobotomyRequestForm(std::string target);
 		~RobotomyRequestForm();
 		RobotomyRequestForm(const RobotomyRequestForm& obj);
+		std::string				getTarget();
+		void					action() const;
 		RobotomyRequestForm&	operator= (const RobotomyRequestForm& obj);
 };
 

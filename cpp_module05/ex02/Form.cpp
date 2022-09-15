@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 13:12:12 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/14 15:21:29 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/09/15 15:09:18 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,9 +67,17 @@ int		Form::getExecGrade() const {
 void	Form::beSigned(Bureaucrat &x) {
 	if (x.getGrade() > this->getSignGrade())
 		throw	Bureaucrat::GradeTooLowException();
-	sign = true;	
+	this->sign = true;	
 }
 
 void	Form::execute(Bureaucrat const& executor) const {
-	
+	if (executor.getGrade() > this->getExecGrade())
+		throw	Bureaucrat::GradeTooLowException();
+	if (!getSign())
+		std::cout << "Could not execute the form cause it needs to be signed first" << std::endl;
+	else {
+		this->action();
+		std::cout << executor.getName() << " executed " << this->getName() << std::endl;
+	}
 }
+

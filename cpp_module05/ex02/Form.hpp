@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 13:12:10 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/15 14:45:16 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/09/15 16:27:42 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,15 +28,16 @@ class	Form {
 		Form();
 		Form(std::string name, int sg, int eg);
 		Form(const Form &obj);
-		Form&	operator= (const Form& obj);
-		virtual			~Form();
-		std::string		getName() const;
-		bool			getSign() const;
-		int				getSignGrade() const;
-		int				getExecGrade() const;
-		void			beSigned(Bureaucrat &x);
-		virtual void	action() const = 0;
-		void			execute(Bureaucrat const& executor) const;
+		Form&				operator= (const Form& obj);
+		virtual				~Form();
+		std::string			getName() const;
+		bool				getSign() const;
+		int					getSignGrade() const;
+		int					getExecGrade() const;
+		void				beSigned(Bureaucrat &x);
+		virtual void		action() const = 0;
+		virtual std::string	getTarget() = 0;
+		void				execute(Bureaucrat const& executor) const;
 };
 
-std::ostream&	operator<<(std::ostream &out, const Form& obj);
+std::ostream&				operator<<(std::ostream &out, const Form& obj);

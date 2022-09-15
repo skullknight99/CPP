@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 14:11:17 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/15 12:56:50 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/09/15 17:17:27 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,12 @@ std::string				RobotomyRequestForm::getTarget() {
 	return this->target;
 }
 void					RobotomyRequestForm::action() const {
+	srand((long) this);
+	int	random = rand();
 	std::cout << "VRRRVVRVRVRRRRRRRRVRVRRVRVRVRVR" << std::endl;
-	if (rand() % 2 == 0)
+	if (random % 2 == 0) {
 		std::cout << this->target << " has been robotomized successfully" << std::endl;
+	}
 	else
 		std::cout << "Robotomy failed" << std::endl;
 }

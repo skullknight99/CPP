@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 14:11:13 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/15 12:56:42 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/09/15 17:09:46 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,4 +56,5 @@ void					ShrubberyCreationForm::action() const{
 "         |  |\n"
 "  ______/____\\____"
 	<< std::endl;
+	std::cout << this->target+"_shrubbery" << " created successfully" << std::endl;
 }

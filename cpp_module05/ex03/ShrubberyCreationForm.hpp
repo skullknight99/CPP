@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 14:11:34 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/15 12:56:38 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/09/16 12:16:58 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ class	ShrubberyCreationForm : public Form
 		std::string				getTarget();
 		void					action() const;
 		ShrubberyCreationForm&	operator= (const ShrubberyCreationForm& obj);
+		Form*					newForm(std::string target);
 };
 
 #endif

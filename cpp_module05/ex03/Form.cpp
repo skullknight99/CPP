@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 13:12:12 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/15 16:07:43 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/09/16 12:13:48 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,4 +80,3 @@ void	Form::execute(Bureaucrat const& executor) const {
 		std::cout << executor.getName() << " executed " << this->getName() << std::endl;
 	}
 }
-

@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 14:11:17 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/15 17:17:27 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/09/16 12:16:28 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,8 @@ void					RobotomyRequestForm::action() const {
 	}
 	else
 		std::cout << "Robotomy failed" << std::endl;
+}
+
+Form*					RobotomyRequestForm::newForm(std::string target) {
+	return (new	RobotomyRequestForm(target));
 }

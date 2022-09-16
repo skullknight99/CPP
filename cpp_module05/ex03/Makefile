@@ -1,17 +1,17 @@
-NAME	=	Forms
+NAME	=	Slaves
 FLAGS	=	-Wall -Wextra -Werror -std=c++98
 RM	=	rm -rf
 CXX	=	c++
 
 SRCS	=	main.cpp Bureaucrat.cpp Form.cpp \
 			PresidentialPardonForm.cpp ShrubberyCreationForm.cpp \
-			RobotomyRequestForm.cpp
+			RobotomyRequestForm.cpp Intern.cpp
 
 OBJS	=	$(SRCS:.cpp=.o)
 
 HEADER	=	Bureaucrat.hpp Form.hpp \
 			PresidentialPardonForm.hpp ShrubberyCreationForm.hpp \
-			RobotomyRequestForm.hpp
+			RobotomyRequestForm.hpp Intern.hpp
 
 $(NAME)	:	$(OBJS) $(HEADER)
 		@$(CXX) $(FLAGS) $(OBJS) -o $(NAME)

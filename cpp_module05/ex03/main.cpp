@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 15:45:09 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/15 17:41:54 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/09/16 12:48:31 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,16 @@
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
+#include "Intern.hpp"
 
 int	main() {
-	// first case
+	Intern	someRandomIntern;
+	// Shrubbery Creation Form that gets executed
 	try {
+		Form	*formB;
+		formB	= someRandomIntern.makeForm("shrubbery creation", "Bender");
 		Bureaucrat	signer1("Signer", 144);
 		Bureaucrat	executor1("Executor", 136);
-		Form	*formB = new	ShrubberyCreationForm("Pool");
 		std::cout << *formB;
 		std::cout << formB->getTarget() << std::endl;
 		std::cout << signer1 << std::endl;
@@ -35,12 +38,16 @@ int	main() {
 	catch (Bureaucrat::GradeTooLowException &e) {
 		std::cerr << e.what() << std::endl;
 	}
+	catch (Intern::WrongName &e) {
+		std::cerr << e.what() << std::endl;
+	}
 	std::cout << "////////////////////////////////" << std::endl;
 	// RobotomyRequestForm that does get executed
 	try {
+		Form	*formX;
+		formX = someRandomIntern.makeForm("robotomy request", "Wagyyy");
 		Bureaucrat  signer2("Signer", 71);
 		Bureaucrat	executor2("Executor", 44);
-		Form	*formX = new	RobotomyRequestForm("Moulinette");
 		std::cout << *formX;
 		std::cout << formX->getTarget() << std::endl;
 		std::cout << signer2 << std::endl;
@@ -56,12 +63,16 @@ int	main() {
 	catch (Bureaucrat::GradeTooLowException &e) {
 		std::cerr << e.what() << std::endl;
 	}
+	catch (Intern::WrongName &e) {
+		std::cerr << e.what() << std::endl;
+	}
 	std::cout << "////////////////////////////////" << std::endl;
-	// PresidentialForm that gets executed.
+	// PresidentialForm
 	try {
+		Form	*formY;
+		formY = someRandomIntern.makeForm("presidential pardon", "Larbi");
 		Bureaucrat  signer3("Signer", 16);
 		Bureaucrat	executor3("Executor", 4);
-		Form	*formY = new	PresidentialPardonForm("Larbi");
 		std::cout << *formY;
 		std::cout << formY->getTarget() << std::endl;
 		std::cout << signer3 << std::endl;
@@ -77,12 +88,16 @@ int	main() {
 	catch (Bureaucrat::GradeTooLowException &e) {
 		std::cerr << e.what() << std::endl;
 	}
+	catch (Intern::WrongName &e) {
+		std::cerr << e.what() << std::endl;
+	}
 	std::cout << "////////////////////////////////" << std::endl;
-	// ShrubberyForm that does not execute
+	// ShrubberyForm wrong
 	try {
+		Form	*formB;
+		formB = someRandomIntern.makeForm("shrubbery cresation", "Bender");
 		Bureaucrat	signer4("Signer", 149);
 		Bureaucrat	executor4("Executor", 140);
-		Form	*formB = new	ShrubberyCreationForm("GG");
 		std::cout << *formB;
 		std::cout << formB->getTarget() << std::endl;
 		std::cout << signer4 << std::endl;
@@ -97,12 +112,16 @@ int	main() {
 	catch (Bureaucrat::GradeTooLowException &e) {
 		std::cerr << e.what() << std::endl;
 	}
+	catch (Intern::WrongName &e) {
+		std::cerr << e.what() << std::endl;
+	}
 	std::cout << "////////////////////////////////" << std::endl;
 	// RobotomyRequestForm that does not get executed
 	try {
+		Form	*formX;
+		formX = someRandomIntern.makeForm("robooom", "Bender");
 		Bureaucrat  signer5("Signer", 80);
 		Bureaucrat	executor5("Executor", 50);
-		Form	*formX = new	RobotomyRequestForm("Robotomized");
 		std::cout << *formX;
 		std::cout << formX->getTarget() << std::endl;
 		std::cout << signer5 << std::endl;
@@ -118,12 +137,16 @@ int	main() {
 	catch (Bureaucrat::GradeTooLowException &e) {
 		std::cerr << e.what() << std::endl;
 	}
+	catch (Intern::WrongName &e) {
+		std::cerr << e.what() << std::endl;
+	}
 	std::cout << "////////////////////////////////" << std::endl;
 	// PresidentialForm that does not get executed.
 	try {
+		Form	*formY;
+		formY = someRandomIntern.makeForm("hehe no form for u", "YEP");
 		Bureaucrat  signer6("Signer", 26);
 		Bureaucrat	executor6("Executor", 6);
-		Form	*formY = new	PresidentialPardonForm("Even Larbi can't pardon you");
 		std::cout << *formY;
 		std::cout << formY->getTarget() << std::endl;
 		std::cout << signer6 << std::endl;
@@ -137,6 +160,9 @@ int	main() {
 		std::cerr << e.what() << std::endl;
 	}
 	catch (Bureaucrat::GradeTooLowException &e) {
+		std::cerr << e.what() << std::endl;
+	}
+	catch (Intern::WrongName &e) {
 		std::cerr << e.what() << std::endl;
 	}
 	std::cout << "////////////////////////////////" << std::endl;

@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 14:11:27 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/15 12:56:30 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/09/16 12:15:21 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ class	PresidentialPardonForm : public Form
 		PresidentialPardonForm&	operator= (const PresidentialPardonForm& obj);
 		std::string				getTarget();
 		void					action() const;
+		Form*					newForm(std::string target);
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 14:11:20 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/15 12:56:56 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/09/16 12:15:46 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,8 @@ std::string				PresidentialPardonForm::getTarget() {
 
 void					PresidentialPardonForm::action() const {
 	std::cout << this->target << " has pardoned Zaphod Beeblebrox." << std::endl;
+}
+
+Form*					PresidentialPardonForm::newForm(std::string target) {
+	return (new	PresidentialPardonForm(target));
 }

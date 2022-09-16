@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 14:11:24 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/15 12:56:20 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/09/16 12:16:45 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ class	RobotomyRequestForm : public Form
 		std::string				getTarget();
 		void					action() const;
 		RobotomyRequestForm&	operator= (const RobotomyRequestForm& obj);
+		Form*					newForm(std::string target);
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 13:12:10 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/15 16:27:42 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/09/16 12:13:41 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ class	Form {
 		virtual void		action() const = 0;
 		virtual std::string	getTarget() = 0;
 		void				execute(Bureaucrat const& executor) const;
+		virtual Form*				newForm(std::string target) = 0;
 };
 
 std::ostream&				operator<<(std::ostream &out, const Form& obj);

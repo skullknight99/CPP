@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 14:48:12 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/15 15:08:03 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/09/16 15:45:10 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,14 +68,12 @@ void	Bureaucrat::executeForm(Form const& form) {
 	try
 	{
 		form.execute(*this);
-		
+		std::cout << this->name << " executed " << form.getName() << std::endl;
 	}
 	catch(const std::exception& e)
 	{
 		std::cerr << this->name << " couldn't execute " << form.getName() << " because " << e.what() << '\n';
 	}
-	
-
 }
 
 std::ostream&	operator<< (std::ostream &out, const Bureaucrat &obj) {

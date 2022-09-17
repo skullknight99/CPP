@@ -1,20 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.cpp                                           :+:      :+:    :+:   */
+/*   Scalars.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/03 14:49:33 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/17 16:41:30 by acmaghou         ###   ########.fr       */
+/*   Created: 2022/09/17 14:16:36 by acmaghou          #+#    #+#             */
+/*   Updated: 2022/09/17 14:48:35 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef	SCALARS_HPP
+#define	SCALARS_HPP
+
 #include <iostream>
-#include <cstring>
-#include <stdexcept>
+#include <string>
 #include <typeinfo>
-using namespace	std;
-int	main(int ac, char **av) {
-	cout << typeid(av[1]).name() << endl;
-}
+
+class Scalars
+{
+	private:
+		
+	public:
+		Scalars();
+		Scalars(const Scalars& obj);
+		Scalars&	operator= (const Scalars& obj);
+		~Scalars();
+};
+
+
+#endif

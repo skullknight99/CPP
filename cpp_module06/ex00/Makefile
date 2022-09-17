@@ -3,11 +3,11 @@ FLAGS	=	-Wall -Wextra -Werror -std=c++98
 RM	=	rm -rf
 CXX	=	c++
 
-SRCS	=	main.cpp
+SRCS	=	main.cpp Convert.cpp
 
 OBJS	=	$(SRCS:.cpp=.o)
 
-HEADER	=	
+HEADER	=	Convert.hpp
 
 $(NAME)	:	$(OBJS) $(HEADER)
 		@$(CXX) $(FLAGS) $(OBJS) -o $(NAME)

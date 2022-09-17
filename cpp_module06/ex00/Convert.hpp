@@ -1,32 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Scalars.hpp                                        :+:      :+:    :+:   */
+/*   Convert.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/17 14:16:36 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/17 14:48:35 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/09/17 18:30:14 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef	SCALARS_HPP
-#define	SCALARS_HPP
+#ifndef	CONVERT_HPP
+#define	CONVERT_HPP
 
 #include <iostream>
 #include <string>
 #include <typeinfo>
 
-class Scalars
-{
-	private:
-		
-	public:
-		Scalars();
-		Scalars(const Scalars& obj);
-		Scalars&	operator= (const Scalars& obj);
-		~Scalars();
-};
-
+void	print(std::string &s);
 
 #endif

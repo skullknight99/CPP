@@ -5,29 +5,34 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/19 17:26:23 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/20 12:09:04 by acmaghou         ###   ########.fr       */
+/*   Created: 2022/09/20 10:38:47 by acmaghou          #+#    #+#             */
+/*   Updated: 2022/09/20 12:07:13 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "whatever.hpp"
+#include "iter.hpp"
 
-int main( void )
+class Awesome
 {
-    int a = 2;
-    int b = 3;
+	private:
+		int _n;
+	public:
+		Awesome(void) : _n(42) {return;}
+		int		get(void) const {return this->_n;}
+};
 
-    ::swap( a, b );
-    std::cout << "a = " << a << ", b = " << b << std::endl;
-    std::cout << "min(a,b) = " << ::min(a , b) << std::endl;
-    std::cout << "max(a,b) = " << ::max(a, b) << std::endl;
+std::ostream& operator << (std::ostream& o, const Awesome &a) {o << a.get(); return o;}
 
-    std::string c = "chaine1";
-    std::string d = "chaine2";
+template	<typename T> void	print(T const& x) {
+	std::cout << x << std::endl;
+	return ;
+}
 
-    ::swap(c, d);
-    std::cout << "c= " << c << ", d = " << d << std::endl;
-    std::cout << "min(c,d) = " << ::min(c, d) << std::endl;
-    std::cout << "max(c,d) = " << ::max(c, d) << std::endl;
-    return (0);
+int	main() {
+	int	tab[] = {0, 1, 2, 3, 4};
+	Awesome	tab2[5];
+
+	iter(tab, 5, print);
+	iter(tab2, 5, print);
+	return (0);
 }

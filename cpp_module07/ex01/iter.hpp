@@ -1,35 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   whatever.hpp                                       :+:      :+:    :+:   */
+/*   iter.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/19 17:34:18 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/20 11:53:50 by acmaghou         ###   ########.fr       */
+/*   Created: 2022/09/20 10:38:42 by acmaghou          #+#    #+#             */
+/*   Updated: 2022/09/20 12:07:43 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef	WHATEVER_HPP
-#define WHATEVER_HPP
+#ifndef	ITER_HPP
+#define ITER_HPP
 
 #include <iostream>
-#include <string>
+#include <cstring>
 
-template	<typename T> void	swap(T &x, T &y)
-{
-	T	s;
-	s = x;
-	x = y;
-	y = s;
-}
-
-template	<typename T> T min(T x, T y) {
-	return (x > y ? y : x);
-}
-
-template	<typename T> T max(T x, T y) {
-	return (x > y ? x : y);
+template	<typename T> void	iter(T *arr, int len, (void )(func)) {
+	
 }
 
 #endif

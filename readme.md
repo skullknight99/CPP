@@ -57,6 +57,3 @@ int	main() {
 ```
 
 - In the example above we created an object from the class human, called it Achraf which has the characteristics of a human, Since every human must have a name, gender, age and speaks a certain language
-
-
-[0]: 

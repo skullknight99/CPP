@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 15:36:48 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/21 14:27:25 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/09/21 15:45:24 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ class Array
 			return *this;
 		}
 
-		T&	operator[] (const unsigned int index) throw (const char *) {
+		T&	operator[] (const unsigned int index) {
 			if (index >= this->size)
 				throw	std::out_of_range("index out of range");
 			return (this->arr[index]);

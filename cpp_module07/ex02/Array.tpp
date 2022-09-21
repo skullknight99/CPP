@@ -12,11 +12,35 @@
 
 #include "Array.hpp"
 
-Array::Array() {
+Array<T>::Array() {
+	this->size = 0;
 	this->arr = new	T[0];
 }
 
-Array::Array(unsigned int n) {
+Array<T>::Array(unsigned int n) {
 	this->arr = new	T[n];
-	this->number = n;
+	this->size = n;
+}
+
+Array<T>::Array(const Array& obj) {
+	*this = obj;
+}
+
+Array&	Array<T>::operator= (const Array& obj) {
+	this->arr = new	T[obj.number];
+	this->size = obj.size;
+	for (int i = 0; i < size; i++) {
+		this->arr[i] = obj.arr[i];
+	}
+	return *this;
+}
+
+T&	Array<T>::operator[] (const int i) throw (const char *) {
+	if (i > size)
+		throw	std::out_of_range("index out of range");
+	return (this->arr[i]);
+}
+
+Array<T>::~Array() {
+	delete[]	arr;
 }

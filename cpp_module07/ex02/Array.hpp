@@ -15,21 +15,23 @@
 
 #include <iostream>
 #include <string>
+#include <cstdlib>
+#include "Array.tpp"
 
 template	<class T>
 class Array
 {
 	private:
 		T	*arr;
-		unsigned int number;
+		unsigned int size;
 	public:
 		Array();
 		Array(unsigned int n);
 		Array(const Array& obj);
 		Array&	operator= (const Array& obj);
-		T&	operator[] (const int size) throw (const char *);
+		T&	operator[] (const int i) throw (const char *);
 		~Array();
-		int	size() const { return this->number;}
+		int	getSize() const;
 };
 
 

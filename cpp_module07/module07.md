@@ -59,3 +59,13 @@ template    <class T> T   myClass<T>::func(T arg) {
 ```
 
 As you can see, you have to redeclare the template use, and specify the class that the function belongs to same way we create a normal member function for a normal class.
+
+
+##	Difference between function overloading and templates
+
+As you might have noticed, templates seem to do a faster function overloading of a function that applies same block of code on different data types, so here are the main differencies:
+
+Function overloading | Templates
+------------- | -------------
+Used when multiple functions do similar operations | Used when multiple functions do identical operations
+Can take different number of arguments  | number of arguments is untouched, only the data types change

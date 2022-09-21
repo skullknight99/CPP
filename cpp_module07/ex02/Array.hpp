@@ -16,7 +16,6 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
-#include "Array.tpp"
 
 template	<class T>
 class Array
@@ -25,13 +24,38 @@ class Array
 		T	*arr;
 		unsigned int size;
 	public:
-		Array();
-		Array(unsigned int n);
-		Array(const Array& obj);
-		Array&	operator= (const Array& obj);
-		T&	operator[] (const int i) throw (const char *);
-		~Array();
-		int	getSize() const;
+		Array() {
+			this->size = 0;
+			this->arr = new	T[0];
+		}
+
+		Array(unsigned int n) {
+			this->arr = new	T[n];
+			this->size = n;
+		}
+
+		Array(const Array& obj) {
+			*this = obj;
+		}
+
+		Array&	operator= (const Array& obj) {
+			this->arr = new	T[obj.size];
+			this->size = obj.size;
+			for (unsigned int i = 0; i < size; i++) {
+				this->arr[i] = obj.arr[i];
+			}
+			return *this;
+		}
+
+		T&	operator[] (const unsigned int i) throw (const char *) {
+			if (i >= this->size)
+				throw	std::out_of_range("index out of range");
+			return (this->arr[i]);
+		}
+
+		~Array() {
+			delete[]	this->arr;
+		}
 };
 
 

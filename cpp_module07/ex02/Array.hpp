@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 15:36:48 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/20 17:46:57 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/09/21 14:27:25 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include <string>
 #include <cstdlib>
 
-template	<class T>
+template	<typename T>
 class Array
 {
 	private:
@@ -26,7 +26,7 @@ class Array
 	public:
 		Array() {
 			this->size = 0;
-			this->arr = new	T[0];
+			this->arr = NULL;
 		}
 
 		Array(unsigned int n) {
@@ -35,26 +35,33 @@ class Array
 		}
 
 		Array(const Array& obj) {
-			*this = obj;
+			this->arr = new	T[obj.getSize()];
+			this->size = obj.getSize();
+			for (unsigned int i = 0; i < size; i++)
+				this->arr[i] = obj.arr[i];
 		}
 
 		Array&	operator= (const Array& obj) {
-			this->arr = new	T[obj.size];
-			this->size = obj.size;
+			this->arr = new	T[obj.getSize()];
+			this->size = obj.getSize();
 			for (unsigned int i = 0; i < size; i++) {
 				this->arr[i] = obj.arr[i];
 			}
 			return *this;
 		}
 
-		T&	operator[] (const unsigned int i) throw (const char *) {
-			if (i >= this->size)
+		T&	operator[] (const unsigned int index) throw (const char *) {
+			if (index >= this->size)
 				throw	std::out_of_range("index out of range");
-			return (this->arr[i]);
+			return (this->arr[index]);
 		}
 
 		~Array() {
 			delete[]	this->arr;
+		}
+		
+		unsigned int getSize() const {
+			return this->size;
 		}
 };
 

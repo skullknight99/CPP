@@ -1,5 +1,5 @@
 # Templates in C++
-
+This is a brief and practical guide towards working with templates, do more research on your own accord.
 ## An Introduction to templates in C++
 
 A template in C++ is a feature that allows generic programming. It could be defined as a blueprint for creating classes or functions.

@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 12:38:18 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/23 12:59:30 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/09/23 13:03:18 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int main()
         x.push_back(20);
         x.push_back(512);
         int dist = std::distance(x.begin(), easyfind(x, 10));
-        std::cout << "index is: "<< dist << std::endl;
+        std::cout << "iterator is: "<< dist << std::endl;
     }
     catch(const std::exception& e)
     {
@@ -39,7 +39,7 @@ int main()
         x.push_back(30);
         x.push_back(-12);
         int dist = std::distance(x.begin(), easyfind(x, -12));
-        std::cout << "index is: " << dist << std::endl;
+        std::cout << "iterator is: " << dist << std::endl;
     }
     catch(const std::exception& e)
     {
@@ -53,7 +53,7 @@ int main()
         x.push_back(777);
         x.push_back(-666);
         int dist = std::distance(x.begin(), easyfind(x, 777));
-        std::cout << "index is: " << dist << std::endl;
+        std::cout << "iterator is: " << dist << std::endl;
     }
     catch(const std::exception& e)
     {

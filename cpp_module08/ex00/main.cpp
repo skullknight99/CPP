@@ -6,33 +6,58 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 12:38:18 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/22 17:13:36 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/09/23 12:59:30 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "easyfind.hpp"
 
-int	main() {
-	std::vector<int>	vect;
-	vect.push_back(13);
-	vect.push_back(7);
-	vect.push_back(-12);
-	vect.push_back(-1);
-	try
-	{
-		std::cout << "index of a= -1 is: "<< easyfind(vect, -1) << std::endl;
-	}
-	catch(const std::exception& e)
-	{
-		std::cerr << e.what() << '\n';
-	}
-	try
-	{
-		std::cout << "index of a=100 is: "<< easyfind(vect, 100) << std::endl;
-	}
-	catch(const std::exception& e)
-	{
-		std::cerr << e.what() << '\n';
-	}
-
+int main()
+{
+    try
+    {
+        std::vector<int> x;
+        x.push_back(0);
+        x.push_back(-12);
+        x.push_back(1);
+        x.push_back(20);
+        x.push_back(512);
+        int dist = std::distance(x.begin(), easyfind(x, 10));
+        std::cout << "index is: "<< dist << std::endl;
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    
+    try
+    {
+        std::list <int> x;
+        x.push_back(0);
+        x.push_back(1);
+        x.push_back(22);
+        x.push_back(30);
+        x.push_back(-12);
+        int dist = std::distance(x.begin(), easyfind(x, -12));
+        std::cout << "index is: " << dist << std::endl;
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    try
+    {
+        std::deque <int> x;
+        x.push_back(12);
+        x.push_back(-55);
+        x.push_back(777);
+        x.push_back(-666);
+        int dist = std::distance(x.begin(), easyfind(x, 777));
+        std::cout << "index is: " << dist << std::endl;
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    
 }

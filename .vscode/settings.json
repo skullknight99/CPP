@@ -49,6 +49,11 @@
 		"tuple": "cpp",
 		"type_traits": "cpp",
 		"typeinfo": "cpp",
-		"utility": "cpp"
+		"utility": "cpp",
+		"__cxx_version": "cpp",
+		"__split_buffer": "cpp",
+		"array": "cpp",
+		"list": "cpp",
+		"vector": "cpp"
 	}
 }

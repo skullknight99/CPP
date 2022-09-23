@@ -54,6 +54,7 @@
 		"__split_buffer": "cpp",
 		"array": "cpp",
 		"list": "cpp",
-		"vector": "cpp"
+		"vector": "cpp",
+		"deque": "cpp"
 	}
 }

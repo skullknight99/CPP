@@ -1,13 +1,13 @@
-NAME	=	find
+NAME	=	Span
 FLAGS	=	-Wall -Wextra -Werror -std=c++98
 RM	=	rm -rf
 CXX	=	c++
 
-SRCS	=	main.cpp
+SRCS	=	main.cpp Span.cpp
 
 OBJS	=	$(SRCS:.cpp=.o)
 
-HEADER	=	easyfind.hpp
+HEADER	=	Span.hpp
 
 $(NAME)	:	$(OBJS) $(HEADER)
 		@$(CXX) $(FLAGS) $(OBJS) -o $(NAME)

@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 14:56:18 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/23 18:24:36 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/09/24 09:45:03 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ class	Span {
 				{
 					return ("Cannot add more elements to the container");
 				}
-		}
+		};
 };
 
 #endif

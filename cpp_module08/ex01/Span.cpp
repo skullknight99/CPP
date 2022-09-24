@@ -6,7 +6,7 @@
 /*   By: acmaghou <acmaghou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 14:56:15 by acmaghou          #+#    #+#             */
-/*   Updated: 2022/09/23 18:25:59 by acmaghou         ###   ########.fr       */
+/*   Updated: 2022/09/24 11:15:56 by acmaghou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	Span::addNumber(int x) {
 	if (this->vect.size() < N)
 		this->vect.push_back(x);
 	else
-		throw	span::maxSize();
+		throw	Span::maxSize();
 }
 
 int	Span::getMax() const {
@@ -46,15 +46,18 @@ int	Span::getMax() const {
 
 int	Span::shortestSpan() {
 	int	min = abs(vect[0] - vect[1]);
+	std::vector<int>::iterator it = vect.begin();
+	std::vector<int>::iterator it2 = it + 1;
+	std::vector<int>::iterator	endator = vect.end();
 	if (vect.size() >= 2) {
-		for (size_t i = 0; i < this->vect.size(); i++) {
-			for (size_t j = i + 1; j < this->vect.size(); j++) {
-				if (vect[j] >= vect[i])
-				{
-					if (abs(vect[i] - vect[j]) <= min)
-						min = abs(vect[i] - vect[j]);
-				}
+		while (it != endator) {
+			it2 = it +1;
+			while (it2 != endator) {
+				if (abs(*it - *it2) <= min)
+					min = abs(*it - *it2);
+				it2++;
 			}
+			it++;
 		}
 	}
 	else
@@ -64,15 +67,18 @@ int	Span::shortestSpan() {
 
 int	Span::longestSpan() {
 	int	max = abs(vect[0] - vect[1]);
+	std::vector<int>::iterator it = vect.begin();
+	std::vector<int>::iterator it2 = it + 1;
+	std::vector<int>::iterator	endator = vect.end();
 	if (vect.size() >= 2) {
-		for (size_t i = 0; i < this->vect.size(); i++) {
-			for (size_t j = i + 1; j < this->vect.size(); j++) {
-				if (vect[j] >= vect[i])
-				{
-					if (abs(vect[i] - vect[j]) >= max)
-						max = abs(vect[i] - vect[j]);
-				}
+		while (it != endator) {
+			it2 = it +1;
+			while (it2 != endator) {
+				if (abs(*it - *it2) >= max)
+					max = abs(*it - *it2);
+				it2++;
 			}
+			it++;
 		}
 	}
 	else

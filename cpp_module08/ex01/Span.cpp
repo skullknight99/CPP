@@ -26,6 +26,7 @@ Span::Span(const Span& obj) {
 
 Span&	Span::operator= (const Span& obj) {
 	this->N = obj.N;
+	this->vect = obj.vect;
 	return *this;
 }
 
@@ -33,10 +34,10 @@ Span::~Span() {
 }
 
 void	Span::addNumber(int x) {
-	if (this->vect.size() <= N)
+	if (this->vect.size() < N)
 		this->vect.push_back(x);
 	else
-		throw	std::length_error("already reached Span's maximum storage of integers");
+		throw	span::maxSize();
 }
 
 int	Span::getMax() const {

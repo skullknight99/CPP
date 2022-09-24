@@ -41,6 +41,14 @@ class	Span {
 					return ("Container too small, cannot calculate span");
 				}
 		};
+		class	maxSize : public	std::exception
+		{
+			public:
+				virtual const char	*what() const throw()
+				{
+					return ("Cannot add more elements to the container");
+				}
+		}
 };
 
 #endif

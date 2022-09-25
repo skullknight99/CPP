@@ -55,6 +55,7 @@
 		"array": "cpp",
 		"list": "cpp",
 		"vector": "cpp",
-		"deque": "cpp"
+		"deque": "cpp",
+		"stack": "cpp"
 	}
 }
